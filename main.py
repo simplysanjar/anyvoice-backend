@@ -97,11 +97,7 @@ allow_headers=["Authorization", "Content-Type"],
 
 app.add_middleware(
 TrustedHostMiddleware,
-allowed_hosts=[
-    "api.anyvoice.world",
-    "www.anyvoice.world",
-    "anyvoice.world",
-])
+allowed_hosts=["api.anyvoice.world"])
 
 # -----------------------------------
 
