@@ -27,7 +27,7 @@ router = APIRouter()
 # WebSocket connection manager for users
 connected_clients = {}
 
-def send_email(recipient, message, subject="Sanjar"):
+def send_email(recipient, message, subject="AnyVoice"):
     api_key = os.getenv("BREVO_API_KEY")
 
     url = "https://api.brevo.com/v3/smtp/email"
@@ -40,8 +40,8 @@ def send_email(recipient, message, subject="Sanjar"):
 
     payload = {
         "sender": {
-            "name": "Sanjar",
-            "email": "noreply@anyvoice.world"
+            "name": "AnyVoice",
+            "email": "support@anyvoice.world"
         },
         "to": [
             {"email": recipient}
